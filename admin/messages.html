@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages | Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">🌿 Admin Panel</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="index.html">Products</a></li>
+          <li><a href="blog-posts.html">Blog Posts</a></li>
+          <li class="active"><a href="messages.html">Messages</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+      <header class="admin-header">
+        <h1>Messages</h1>
+      </header>
+
+      <section class="product-list">
+        <div class="section-header">
+          <h2>Inbox</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Sender</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Received</th>
+            </tr>
+          </thead>
+          <tbody id="messageTableBody">
+            <!-- JS will inject messages -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer class="admin-footer">
+    <p>&copy; 2025 Organic Products Admin Dashboard. All rights reserved.</p>
+  </footer>
+
+  <script src="messages.js"></script>
+</body>
+</html>

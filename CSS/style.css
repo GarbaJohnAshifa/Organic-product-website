@@ -1,0 +1,676 @@
+
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d40;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none; /* Removes underline */
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    border-bottom: 2px solid #ffcc80;
+    color: #ffcc80;
+  }
+
+/* ========== Hero Section ========== */
+.hero {
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.7)),
+              url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1.2s ease forwards;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.btn {
+  background-color: #ffcc80;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #ffd699;
+  transform: translateY(-2px);
+}
+
+/* ========== About Section ========== */
+.about {
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========== Featured Products Section ========== */
+.featured-products {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 1.8rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  width: 280px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.5rem;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 768px) {
+.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+}
+
+.product-card {
+    width: 90%;
+}
+}
+
+@media (max-width: 480px) {
+.hero-text h1 {
+    font-size: 1.6rem;
+}
+
+.hero-text p {
+    font-size: 1rem;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+}
+}
+
+/* ========== Keyframe Animations ========== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  /* Delay variants */
+  .delay-1 { animation-delay: 0.3s;}
+  .delay-2 { animation-delay: 0.6s;}
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  }
+  
+
+
+  /* Newsletter Section */
+.newsletter {
+    background-color: #fefefe;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .newsletter h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletter form {
+    margin-top: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 0.6rem;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  
+  .newsletter.btn {
+    padding: 0.6rem 1rem;
+    background-color: #004d40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter.btn:hover {
+    background-color: #00695c;
+  }
+  
+  .message {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Back to Top Button */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #backToTop:hover {
+    background-color: #00796b;
+  }
+  
+
+
+
+
+
+  /*product page  styling*/
+  /* Layout fix for sticky footer */
+html, body {
+    height: 100%;
+  }
+  
+  .page-wrapper {
+    min-height: calc(100vh - 100px); /* Adjust based on your actual footer height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Catalog styling */
+  .product-catalog {
+    flex-grow: 1;
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  
+  .product-catalog h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Footer styling */
+  footer {
+    background: linear-gradient(90deg, #004d40, #00695c);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    animation: slideUpFadeIn 0.8s ease;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  }
+  
+  /* Optional: hidden info style for JS toggles */
+  .more-info {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+  
+  .more-info.show-info {
+    max-height: 150px; /* big enough to reveal content */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  .view-more-btn {
+    display: inline-block;
+    background-color: #00bfa5;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .view-more-btn:hover {
+    background-color: #004d40;
+  }
+
+
+
+/* Blog Intro Section */
+.blog-intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f1fdf6;
+}
+
+.blog-intro h1 {
+  font-size: 2.2rem;
+  color: #00695c;
+  margin-bottom: 0.5rem;
+}
+
+.blog-intro p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-btn {
+  background-color: #e0f2f1;
+  color: #00695c;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #00695c;
+  color: #fff;
+}
+
+/* Blog Post Grid */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+}
+
+/* Blog Post Cards */
+.post-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+
+
+.post-card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-card h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: #004d40;
+}
+
+.post-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.read-more {
+  display: block;
+  margin: 0 1rem 1.2rem;
+  color: #00695c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+/* Contact Page Layout */
+.contact-main {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom right, #f9fdfc, #e0f2f1);
+  }
+  
+  .contact-wrapper {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 105, 92, 0.08);
+    overflow: hidden;
+    animation: slideIn 0.8s ease-out both;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    flex: 1;
+    background: #00695c;
+    color: #fff;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+  
+  .contact-info li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  .contact-info strong {
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.15);
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    flex: 1;
+    padding: 2.5rem;
+  }
+  
+  .contact-form h2 {
+    margin-top: 0;
+    color: #004d40;
+    font-size: 1.8rem;
+  }
+  
+  .form-subtext {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 1.8rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1.1rem 0.75rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #00bfa5;
+    outline: none;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    font-size: 0.95rem;
+    color: #777;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background-color: #fff;
+    padding: 0 0.25rem;
+  }
+  
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:focus + label,
+  .form-group textarea:not(:placeholder-shown) + label {
+    top: -0.6rem;
+    left: 0.6rem;
+    font-size: 0.75rem;
+    color: #00bfa5;
+  }
+  
+  /* Submit Button */
+  .contact-form button[type="submit"] {
+    background: #00bfa5;
+    color: #fff;
+    border: none;
+    padding: 0.85rem 1.8rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #004d40;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+  .contact-wrapper {
+      flex-direction: column;
+  }
+  
+  .contact-info,
+  .contact-form {
+      padding: 2rem;
+  }
+  }
+  
+
+
+
+
+
+
+  /*blog */
+  css
+.category-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}

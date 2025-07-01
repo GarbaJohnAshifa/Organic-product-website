@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | Organic Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">🌿 Admin Panel</div>
+      <nav>
+        <ul>
+            <a href="./index.html">Dashboard</a>
+            <a href="./index.html">Products</a>
+          <li><a href="blog-posts.html">Blog Posts</a></li>
+          <li><a href="messages.html">Messages</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+      <header class="admin-header">
+        <h1>Welcome, Admin</h1>
+      </header>
+
+      <!-- Stats Overview -->
+      <section class="stats">
+        <div class="stat-card">🧴 <p>Products: <strong>3</strong></p></div>
+        <div class="stat-card">📝 <p>Blog Posts: <strong>3</strong></p></div>
+        <div class="stat-card">✉ <p>Messages: <strong>12</strong></p></div>
+        <div class="stat-card">📬 <p>Subscribers: <strong>48</strong></p></div>
+      </section>
+
+      <!-- Product Table -->
+      <section class="product-list">
+        <div class="section-header">
+          <h2>Product Inventory</h2>
+          <button id="addProductBtn">+ Add Product</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody">
+            <!-- JavaScript will inject rows here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add Product Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <h3>Add New Product</h3>
+      <form id="addProductForm">
+        <input type="text" id="productName" placeholder="Product Name" required />
+        <input type="text" id="productPrice" placeholder="Price (e.g. 17000 FCFA)" required />
+        <input type="number" id="productStock" placeholder="Stock Quantity" required />
+        <button type="submit">Add Product</button>
+        <button type="button" id="closeModal">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="admin-footer">
+    <p>&copy; 2025 Organic Products Admin Dashboard. All rights reserved.</p>
+  </footer>
+
+  <!-- JS Logic -->
+  <script src="admin.js"></script>
+</body>
+</html>
+

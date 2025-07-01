@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organic Wellness Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Organic Blog</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="blog-intro">
+    <h1>Wellness Wisdom from Nature</h1>
+    <p>Explore insights, tips, and stories from the world of organic care.</p>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="skincare">Skincare</button>
+      <button class="filter-btn" data-category="haircare">Haircare</button>
+      <button class="filter-btn" data-category="wellness">Wellness</button>
+    </div>
+  </section>
+
+  <section class="blog-posts">
+    <div class="post-card" data-category="skincare">
+      <img src="images/blog1.jpg" alt="Skincare Post">
+      <h3>5 Coconut Oil Skincare Secrets</h3>
+      <p>Discover natural remedies your skin will thank you for.</p>
+      <a href="blog-single.html" class="read-more">Read More</a>
+    </div>
+
+    <div class="post-card" data-category="haircare">
+      <img src="images/blog2.jpg" alt="Haircare Post">
+      <h3>How to Use Carrot Oil for Hair Growth</h3>
+      <p>Strengthen your roots naturally with this orange powerhouse.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="post-card" data-category="wellness">
+      <img src="images/blog3.jpg" alt="Wellness Post">
+      <h3>Morning Rituals with Pawpaw Oil</h3>
+      <p>Small daily habits to boost your mood, health, and glow.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Organic Products. All rights reserved.</p>
+  </footer>
+
+  <script src="js/blog.js"></script>
+</body>
+</html>

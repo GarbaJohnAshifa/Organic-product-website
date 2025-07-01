@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Blog Posts | Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">🌿 Admin Panel</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="index.html">Products</a></li>
+          <li class="active"><a href="blog-posts.html">Blog Posts</a></li>
+          <li><a href="messages.html">Messages</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+      <header class="admin-header">
+        <h1>Manage Blog Posts</h1>
+        <p class="page-subtitle">This is the blog post manager page.</p>
+      </header>
+
+      <section class="product-list">
+        <div class="section-header">
+          <h2>Posts</h2>
+          <button id="addBlogBtn">+ Add Blog Post</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Published</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="blogTableBody">
+            <!-- JavaScript will inject blog posts here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="blogModal">
+    <div class="modal-box">
+      <h3>Add Blog Post</h3>
+      <form id="blogForm">
+        <input type="text" id="postTitle" placeholder="Post Title" required />
+        <input type="text" id="postCategory" placeholder="Category" required />
+        <input type="date" id="postDate" required />
+        <button type="submit">Add Post</button>
+        <button type="button" id="cancelBlogBtn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="admin-footer">
+    <p>&copy; 2025 Organic Products Admin Dashboard. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="blog-script.js"></script>
+</body>
+</html>
+
